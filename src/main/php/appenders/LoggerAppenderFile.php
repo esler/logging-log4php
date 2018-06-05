@@ -106,7 +106,7 @@ class LoggerAppenderFile extends LoggerAppender {
 		
 		// Required when appending with concurrent access
 		if($this->append) {
-			fseek($this->fp, 0, SEEK_END);
+			@fseek($this->fp, 0, SEEK_END);
 		}
 		
 		// Write the header
